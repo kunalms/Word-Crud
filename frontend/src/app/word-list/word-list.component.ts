@@ -10,7 +10,7 @@ import {AddEditWordDialogService} from "../core/services/add-edit-word-dialog.se
 })
 export class WordListComponent implements OnInit {
 
-  words: Word[] = []
+  public words: Word[] = []
 
   constructor(private wordService: WordService, private addEditWordDialogService: AddEditWordDialogService) {
   }
@@ -29,5 +29,9 @@ export class WordListComponent implements OnInit {
         this.wordService.addWord(word).subscribe(word => this.words.push(word));
       }
     });
+  }
+
+  removeWord(index: number) {
+    this.words.splice(index, 1);
   }
 }
