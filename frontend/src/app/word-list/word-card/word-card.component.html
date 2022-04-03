@@ -1,0 +1,7 @@
+<mat-card fxLayoutAlign="space-between center" class="word-container" (mouseenter)="isHovering = true" (mouseleave)="isHovering= false">
+  <div>{{word?.content}}</div>
+  <div *ngIf="isHovering">
+    <button mat-icon-button color="primary" (click)="editWord()"> <mat-icon>edit</mat-icon></button>
+    <button mat-icon-button color="warn" (click)="deleteWord()"> <mat-icon>delete</mat-icon></button>
+  </div>
+</mat-card>
