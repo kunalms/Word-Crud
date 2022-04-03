@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Add Word</h2>
+<mat-dialog-content>
+  <form [formGroup]="wordForm">
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Word" formControlName="content">
+          <mat-error *ngIf="wordForm.controls['content'].hasError('required')">
+            Word is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="accent" mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="{content: wordForm?.get('content')?.value}"
+          [disabled]="wordForm.invalid">Submit
+  </button>
+</mat-dialog-actions>
+
