@@ -17,9 +17,15 @@ export class WordService {
   }
 
   addWord(word:Word): Observable<Word>{
-    console.log(word);
     const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
     return this.httpClient.post<Word>(this.WORD_API_ENDPOINT + 'add', word, {headers: headers});
   }
 
+  editWord(word: Word) {
+    return this.httpClient.put<Word>(this.WORD_API_ENDPOINT + 'edit/' +word.id, word);
+  }
+
+  deleteWord(word: Word): Observable<void> {
+    return this.httpClient.delete<void>(this.WORD_API_ENDPOINT + word.id);
+  }
 }
