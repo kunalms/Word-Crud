@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>Add Word</h2>
+<h2 mat-dialog-title>{{data.title}}</h2>
 <mat-dialog-content>
   <form [formGroup]="wordForm">
     <div class="row">
@@ -19,7 +19,7 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-raised-button color="accent" mat-dialog-close>Cancel</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="{content: wordForm?.get('content')?.value}"
+  <button mat-raised-button color="primary" [mat-dialog-close]="{content: wordForm?.get('content')?.value, id: data.id}"
           [disabled]="wordForm.invalid">Submit
   </button>
 </mat-dialog-actions>

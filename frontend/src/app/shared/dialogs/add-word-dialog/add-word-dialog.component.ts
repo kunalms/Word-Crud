@@ -13,7 +13,7 @@ export class AddWordDialogComponent implements OnInit {
     content: [null, [Validators.required, Validators.maxLength(15)]],
   });
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { content: String }, private fb: FormBuilder) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { content: string, title: string, id: number }, private fb: FormBuilder) {
   }
 
   ngOnInit(): void {

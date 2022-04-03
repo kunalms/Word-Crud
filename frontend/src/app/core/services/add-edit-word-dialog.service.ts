@@ -1,13 +1,12 @@
 import {Injectable} from '@angular/core';
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {AddWordDialogComponent} from "../../shared/dialogs/add-word-dialog/add-word-dialog.component";
+import {Word} from "../../shared/models/word";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AddEditWordDialogService {
-
-  content: string = '';
 
   constructor(private dialog: MatDialog) {
   }
@@ -15,7 +14,18 @@ export class AddEditWordDialogService {
   openDialog(): MatDialogRef<AddWordDialogComponent> {
     return this.dialog.open(AddWordDialogComponent, {
       width: '250px',
-      data: {content: this.content}
+      data: {content: '', title: 'Add Word'}
+    });
+  }
+
+  openEditDialog(word: Word): MatDialogRef<AddWordDialogComponent> {
+    return this.dialog.open(AddWordDialogComponent, {
+      width: '250px',
+      data: {
+        content: word.content,
+        id: word.id,
+        title: 'Edit Word'
+      }
     });
   }
 }
