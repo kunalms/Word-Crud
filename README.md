@@ -6,21 +6,22 @@ Github Repo: [Word-Crud](https://github.com/kunalms/Word-Crud)
 ## Screenshots
 
 Landing Page
-![](./Screenshots/Screenshot 2022-04-03 at 6.20.04 PM.png)
+![](./Screenshots/Screenshot%202022-04-03%20at%206.20.04%20PM.png)
 
 User can hove on individual card for actions
-![](./Screenshots/Screenshot 2022-04-03 at 6.20.12 PM.png)
+![](./Screenshots/Screenshot%202022-04-03%20at%206.20.12%20PM.png)
 
 Add button on top right lets user add a new word
-![](./Screenshots/Screenshot 2022-04-03 at 6.20.28 PM.png)
+![](./Screenshots/Screenshot%202022-04-03%20at%206.20.28%20PM.png)
 
 Add Dialog has a validation of required and max length 15
-![](./Screenshots/Screenshot 2022-04-03 at 6.20.45 PM.png)
+![](./Screenshots/Screenshot%202022-04-03%20at%206.20.45%20PM.png)
 
 User can also edit existing words 
-![](./Screenshots/Screenshot 2022-04-03 at 6.20.56 PM.png)
+![](./Screenshots/Screenshot%202022-04-03%20at%206.20.56%20PM.png)
 
-![](./Screenshots/Screenshot 2022-04-03 at 6.21.05 PM.png)
+User Can also delete words 
+![](./Screenshots/Screenshot%202022-04-03%20at%206.21.05%20PM.png)
 
 Edit has same validations as add word dialog
-![](./Screenshots/Screenshot 2022-04-03 at 6.21.13 PM.png)
+![](./Screenshots/Screenshot%202022-04-03%20at%206.21.13%20PM.png)
