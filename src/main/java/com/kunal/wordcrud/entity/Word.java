@@ -14,18 +14,18 @@ public class Word {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String word;
+    private String content;
 
     public Word() {
     }
 
-    public Word(String word) {
-        this.word = word;
+    public Word(String content) {
+        this.content = content;
     }
 
     public Word(long id, String word) {
         this.id = id;
-        this.word = word;
+        this.content = word;
     }
 
     public long getId() {
@@ -36,12 +36,12 @@ public class Word {
         this.id = id;
     }
 
-    public String getWord() {
-        return word;
+    public String getContent() {
+        return content;
     }
 
-    public void setWord(String word) {
-        this.word = word;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     @Override
@@ -49,11 +49,11 @@ public class Word {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Word word = (Word) o;
-        return id == word.id && Objects.equals(word, word.word);
+        return id == word.id && Objects.equals(word, word.content);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, word);
+        return Objects.hash(id, content);
     }
 }
