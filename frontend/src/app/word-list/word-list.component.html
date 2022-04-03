@@ -1,5 +1,17 @@
-<p>word-list works!</p>
 
-<div *ngFor="let word of words">
-  {{word.word}}
+
+<div class="word-list-container" >
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h2>{{words.length }} Words found</h2>
+    <button (click)="addWord()" mat-raised-button color="primary" fxLayoutAlign="start center" fxLayoutGap="8px">
+      <mat-icon class="button-icon">add_circle_outline</mat-icon><span> Add Word</span>
+    </button>
+  </div>
+
+  <div fxLayout="row wrap">
+    <mat-card *ngFor="let word of words" class="word-container" fxFlex="calc(20% - 16px)">
+      {{word.content}}
+    </mat-card>
+  </div>
 </div>
+
