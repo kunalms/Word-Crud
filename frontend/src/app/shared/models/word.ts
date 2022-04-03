@@ -1,4 +1,4 @@
 export interface Word {
   id?: number;
-  word: string
+  content: string
 }
