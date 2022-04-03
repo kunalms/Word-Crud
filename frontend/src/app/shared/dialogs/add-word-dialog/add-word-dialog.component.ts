@@ -10,7 +10,7 @@ import {FormBuilder, Validators} from "@angular/forms";
 export class AddWordDialogComponent implements OnInit {
 
   wordForm = this.fb.group({
-    content: [null, Validators.required],
+    content: [null, [Validators.required, Validators.maxLength(15)]],
   });
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: { content: String }, private fb: FormBuilder) {

@@ -5,8 +5,12 @@
       <div class="col">
         <mat-form-field class="full-width">
           <input matInput placeholder="Word" formControlName="content">
+
           <mat-error *ngIf="wordForm.controls['content'].hasError('required')">
             Word is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="wordForm.controls['content'].hasError('maxlength')">
+            Length of word cannot be greater than <strong>15</strong>.
           </mat-error>
         </mat-form-field>
       </div>
